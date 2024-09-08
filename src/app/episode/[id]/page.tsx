@@ -18,6 +18,7 @@ const EpisodePage = async (props: EpisodePageProps) => {
 
   try {
     const res = await axios.get(getEpisodeApi);
+    console.log("DATAAAA", res);
     const episode = res.data;
     return <EpisodeDetails episode={episode} />;
   } catch (error) {
