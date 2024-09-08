@@ -1,0 +1,58 @@
+.episodeContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .episodeHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .episodeTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .episodeAirDate {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .episodeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .episodeImageWrapper {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .episodeSummary {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+  }
+  
+  @media (min-width: 768px) {
+    .episodeContent {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .episodeImageWrapper {
+      margin-right: 20px;
+    }
+  
+    .episodeSummary {
+      flex: 1;
+    }
+  }
+  

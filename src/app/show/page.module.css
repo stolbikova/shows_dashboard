@@ -1,0 +1,21 @@
+.pageContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.episodeHeader {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 10px; 
+  }
+
+  .episodeHeader {
+    font-size: 1.5rem;
+  }
+}

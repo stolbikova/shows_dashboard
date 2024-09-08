@@ -1,0 +1,54 @@
+.seasonContainer {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .seasonHeader {
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  .seasonHeader > h3 {
+    font-weight: 300;
+}
+  
+  .seasonHeader:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .episodeList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .episodeItem {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  .episodeItem:last-child {
+    border-bottom: none;
+  }
+  
+  .episodeTitle {
+    font-size: 1.1rem;
+  }
+  
+  .episodeTitle a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  .episodeTitle a:hover {
+    text-decoration: underline;
+  }
+  

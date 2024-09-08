@@ -1,0 +1,36 @@
+.showContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+  }
+
+  .showImageWrapper {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .showInfo {
+    text-align: center;
+    flex: 1;
+  }
+  
+  @media (min-width: 768px) {
+    .showContainer {
+      flex-direction: row; 
+      align-items: flex-start; 
+    }
+  
+    .showImageWrapper {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .showInfo {
+      text-align: left;
+    }
+  }
+  
