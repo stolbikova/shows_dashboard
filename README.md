@@ -7,11 +7,9 @@ This is a **TV Show Search Application** built using **Next.js** with the **App 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
-- [Folder Structure](#folder-structure)
 - [MobX State Management](#mobx-state-management)
 - [Usage](#usage)
 - [API](#api)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -77,14 +75,6 @@ You need to have the following installed on your local machine:
 
 ---
 
-## Folder Structure
-
-Here's an overview of the project structure:
-
-. ├── app/ │ ├── search/ │ │ └── page.tsx # Search page where users can search TV shows │ ├── show/ │ │ └── [id].tsx # Dynamic show details page │ └── layout.tsx # Root layout for the application ├── components/ │ ├── ShowDetails.tsx # Component to display detailed information about a show ├── store/ │ └── SearchStore.ts # MobX store for managing search state and API requests ├── styles/ │ ├── SearchPage.module.css # CSS Module for the search page │ ├── ShowDetails.module.css # CSS Module for show details page ├── public/ │ └── favicon.ico # App favicon ├── next.config.js # Next.js configuration ├── package.json # Project dependencies and scripts └── README.md # Project documentation (this file)
-
----
-
 ## MobX State Management
 
 ### `SearchStore.ts`
@@ -114,3 +104,42 @@ class SearchStore {
   }
 }
 ```
+
+## Usage
+
+### Search for a Show
+
+1. Navigate to the **search page** by visiting `/search` in your browser.
+2. Enter the name of a TV show and click **Search**.
+3. A list of TV shows matching your query will be displayed.
+4. Click on a show to be redirected to its details page.
+
+### View Show Details
+
+1. After searching for a show, click on a result to view more information about the show.
+2. You will be redirected to `/show/{id}`, where `{id}` is the show's unique identifier from the **TVMaze API**.
+
+---
+
+## API
+
+This app uses the **TVMaze API** to search for shows and retrieve show details.
+
+### Endpoints:
+
+1. **Search Shows**:
+
+   - URL: `http://api.tvmaze.com/search/shows?q={query}`
+   - Method: `GET`
+   - Description: Searches for shows based on the query string.
+
+2. **Show Details**:
+   - URL: `http://api.tvmaze.com/shows/{id}`
+   - Method: `GET`
+   - Description: Fetches detailed information about a specific show based on the show’s `id`.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
