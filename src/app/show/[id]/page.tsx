@@ -7,11 +7,20 @@ import { GET_EPISODES_API, GET_SHOW_DETAILS_API } from "@/constants";
 
 import styles from "./page.module.css";
 
-const showId = "6771";
-const showDetailsApi = GET_SHOW_DETAILS_API(showId);
-const episodesApi = GET_EPISODES_API(showId);
+const defaultShowId = "6771";
 
-export default async function ShowPage() {
+interface ShowPageProps {
+  params: { id: string };
+}
+
+export default async function ShowPage(props: ShowPageProps) {
+  const {
+    params: { id },
+  } = props;
+
+  const showDetailsApi = GET_SHOW_DETAILS_API(id);
+  const episodesApi = GET_EPISODES_API(id);
+
   // Fetch data on the server
   const showResponse = await axios.get(showDetailsApi);
   const episodesResponse = await axios.get(episodesApi);

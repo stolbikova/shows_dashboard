@@ -13,7 +13,9 @@ const EpisodePage = async (props: EpisodePageProps) => {
   const {
     params: { id },
   } = props;
+
   const getEpisodeApi = GET_EPISODE_DETAILS_API(id);
+
   try {
     const res = await axios.get(getEpisodeApi);
     const episode = res.data;
