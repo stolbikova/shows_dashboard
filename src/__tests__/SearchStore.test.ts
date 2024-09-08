@@ -1,7 +1,7 @@
 import axios from "axios";
 import { act } from "react";
 
-import searchStore from "../store/SearchStore";
+import searchStore from "@/store/SearchStore";
 
 // Mock axios
 jest.mock("axios");
