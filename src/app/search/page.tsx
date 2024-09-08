@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite";
 import { FormEvent } from "react";
 import { useRouter } from "next/navigation";
 
-import searchStore from "@/store/ShowStore";
+import searchStore from "@/store/SearchStore";
 
 import styles from "./page.module.css";
 
