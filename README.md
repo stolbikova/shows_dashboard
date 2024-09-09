@@ -137,6 +137,7 @@ This app uses the **TVMaze API** to search for shows and retrieve show details.
    - URL: `http://api.tvmaze.com/shows/{id}`
    - Method: `GET`
    - Description: Fetches detailed information about a specific show based on the show’s `id`.
+   - For example: http://localhost:3000/show/6771
 
 ---
 

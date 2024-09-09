@@ -7,8 +7,6 @@ import { GET_EPISODES_API, GET_SHOW_DETAILS_API } from "@/constants";
 
 import styles from "./page.module.css";
 
-const defaultShowId = "6771";
-
 interface ShowPageProps {
   params: { id: string };
 }

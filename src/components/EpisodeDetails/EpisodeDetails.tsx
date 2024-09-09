@@ -1,5 +1,7 @@
 import Image from "next/image";
+
 import { Episode } from "@/types";
+
 import styles from "./EpisodeDetails.module.css";
 
 interface EpisodeDetailsProps {
@@ -7,7 +9,6 @@ interface EpisodeDetailsProps {
 }
 
 const EpisodeDetails = ({ episode }: EpisodeDetailsProps) => {
-  console.log(episode);
   return (
     <div className={styles.episodeContainer}>
       <div className={styles.episodeHeader}>
@@ -26,17 +27,7 @@ const EpisodeDetails = ({ episode }: EpisodeDetailsProps) => {
               className={styles.episodeImage}
               priority={true}
             />
-          ) : (
-            <Image
-              src="/default-image.jpg"
-              alt="Default episode image"
-              width={500}
-              height={450}
-              layout="responsive"
-              className={styles.episodeImage}
-              priority={true}
-            />
-          )}
+          ) : null}
         </div>
         <div
           className={styles.episodeSummary}

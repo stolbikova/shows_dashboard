@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { useRouter } from "next/navigation";
 
-import SearchPage from "../app/search/page";
-import searchStore from "../store/SearchStore";
+import SearchPage from "@/app/search/page";
+import searchStore from "@/store/SearchStore";
 
 // Mock the MobX store
 jest.mock("../store/SearchStore");
@@ -60,13 +60,13 @@ describe("Search Page", () => {
   it("displays search results", () => {
     searchStore.results = [
       { show: { id: 1, name: "Breaking Bad" } },
-      { show: { id: 2, name: "Stranger Things" } },
+      { show: { id: 2, name: "Dexter" } },
     ];
 
     render(<SearchPage />);
 
     const result1 = screen.getByText("Breaking Bad");
-    const result2 = screen.getByText("Stranger Things");
+    const result2 = screen.getByText("Dexter");
 
     expect(result1).toBeInTheDocument();
     expect(result2).toBeInTheDocument();

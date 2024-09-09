@@ -39,10 +39,10 @@ describe("EpisodeList", () => {
 
     // Verify that Season headers are rendered
     expect(
-      screen.getByText((content, element) => content.includes("Season 1"))
+      screen.getByText((content) => content.includes("Season 1"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("Season 2"))
+      screen.getByText((content) => content.includes("Season 2"))
     ).toBeInTheDocument();
   });
 
@@ -51,24 +51,24 @@ describe("EpisodeList", () => {
 
     // Initially, episodes should not be visible
     expect(
-      screen.queryByText((content, element) => content.includes("Episode 1"))
+      screen.queryByText((content) => content.includes("Episode 1"))
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText((content, element) => content.includes("Episode 2"))
+      screen.queryByText((content) => content.includes("Episode 2"))
     ).not.toBeInTheDocument();
 
     // Click to expand Season 1
-    const season1Header = screen.getByText((content, element) =>
+    const season1Header = screen.getByText((content) =>
       content.includes("Season 1")
     );
     fireEvent.click(season1Header);
 
     // Episodes for Season 1 should now be visible
     expect(
-      screen.getByText((content, element) => content.includes("Episode 1"))
+      screen.getByText((content) => content.includes("Episode 1"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("Episode 2"))
+      screen.getByText((content) => content.includes("Episode 2"))
     ).toBeInTheDocument();
   });
 
@@ -83,10 +83,10 @@ describe("EpisodeList", () => {
 
     // Episodes should be visible
     expect(
-      screen.getByText((content, element) => content.includes("Episode 1"))
+      screen.getByText((content) => content.includes("Episode 1"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("Episode 2"))
+      screen.getByText((content) => content.includes("Episode 2"))
     ).toBeInTheDocument();
 
     // Click again to collapse Season 1
@@ -96,7 +96,7 @@ describe("EpisodeList", () => {
       screen.queryByText((content) => content.includes("Episode 1"))
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText((content, element) => content.includes("Episode 2"))
+      screen.queryByText((content) => content.includes("Episode 2"))
     ).not.toBeInTheDocument();
   });
 });
