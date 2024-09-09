@@ -76,7 +76,7 @@ describe("EpisodeList", () => {
     render(<EpisodeList episodes={mockEpisodes} />);
 
     // Click to expand Season 1
-    const season1Header = screen.getByText((content, element) =>
+    const season1Header = screen.getByText((content) =>
       content.includes("Season 1")
     );
     fireEvent.click(season1Header);
